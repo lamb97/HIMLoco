@@ -37,7 +37,7 @@ from legged_gym.envs import *
 from legged_gym.utils import get_args, task_registry
 import torch
 
-def train(args, headless=True):
+def train(args, headless=False):
     args.headless = headless
     args.resume = False
     env, env_cfg = task_registry.make_env(name=args.task, args=args)
